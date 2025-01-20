@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Julien over 4 jaar</title>
+</head>
+
+<body>
+    <header>
+        <button onclick="myFunction()" class="DMbutton">Dark Mode</button>
+    </header>
+    <article>
+    <h1>Julien Karch</h1>
+    <h2>Over 4 jaar</h2>
+    <ol>
+    <li>Mijn (tech) skills aan het einde van de opleiding:
+        Dat ik een paar coding languages ken, om makkelijk websites en apps te maken.
+    </li>
+    <li>Mijn soft skills straks:
+        Ik wil na deze opdracht weten hoe ik een modal kan maken en beter wireframes kan maken in Xd.
+    </li>
+    <li>Wat wil ik bereikt hebben:
+        Dat ik eerder begin met mijn opdrachten en alles afmaak.
+    </li>
+    <li>Na het Ma:
+        Een baan waar ik blij ben en genoeg mee verdien.
+    </li>
+    <li>Mijn droombaan dagboek:
+        Dat weet ik niet.
+    </li>
+    <li>Een andere droom:
+        Dat alles goed gaat met mijn familie en vrienden.
+    </li>
+</article>
+<img id="myImg" src="img/julien.png" alt="Julien">
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<footer>
+    Gemaakt door Julien Karch
+</footer>
+</body>
+<script>    function myFunction() {    var element = document.body;        element.classList.toggle("dark-modebody");}{ }
+    
+    var modal = document.getElementById("myModal");
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+</html>
